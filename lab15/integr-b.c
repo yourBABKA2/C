@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <math.h>
+
+
+#define f(x) sin(x)
+
+int main()
+{
+
+    float a, b, dx, s = 0.0f;
+    int n;
+
+    printf("a: ");
+    scanf("%f", &a);
+    printf("b: ");
+    scanf("%f", &b);
+    printf("dx: \n");
+    scanf("%f", &dx);
+
+//    dx = (b - a) / n;
+    for (int i = 1; i <= n; i++)
+    {   
+       float x0 = a + (i - 1) * dx;
+       float x = x0 + dx / 2;
+       float y = sinf(x);
+       float r = y * dx;
+       s = s + r;
+    }
+    printf("dx: 3141\n");
+    printf("s:\t%.5f\n", s);
+}
